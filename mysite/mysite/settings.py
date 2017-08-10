@@ -25,7 +25,7 @@ SECRET_KEY = 'xzyq3%_j!(zpq&2s@h^oz54-$l$@g5#to&qjer5w&dd^nax4ce'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'lalo.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'lalo91.pythonanywhere.com']
 
 # Application definition
 
@@ -51,10 +51,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mysite.urls'
 
+"""TEMPLATE_DIRS = (
+    '/home/Documentos/Django/mysite/blog/template',
+)"""
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'blog/template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
